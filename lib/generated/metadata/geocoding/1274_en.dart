@@ -4,7 +4,5 @@
 
 /// Geocoding JSON data for 1274_en
 Map<int, String> get1274_en() {
-  return {
-    1274: "Wisconsin"
-  };
+  return {1274: "Wisconsin"};
 }
