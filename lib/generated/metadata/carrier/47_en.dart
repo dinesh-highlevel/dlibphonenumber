@@ -133,7 +133,6 @@ Map<int, String> get47_en() {
     474117: "telia",
     474118: "telia",
     474119: "telia",
-    474536: "nkom (nasjonal kommunikasjonsmyndighet)",
     474537: "erate",
     474538: "erate",
     474590: "telenor norge",

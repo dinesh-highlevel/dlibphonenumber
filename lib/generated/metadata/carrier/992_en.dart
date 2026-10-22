@@ -6,6 +6,7 @@
 Map<int, String> get992_en() {
   return {
     9920: "ZET-MOBILE",
+    9926: "ZET-MOBILE",
     99200: "Megafon",
     99201: "Megafon",
     99202: "Megafon",
@@ -21,6 +22,7 @@ Map<int, String> get992_en() {
     99222: "O-Mobile",
     99227: "Megafon",
     99230: "O-Mobile",
+    99238: "ZET-MOBILE",
     99240: "ZET-MOBILE",
     99241: "Megafon",
     99250: "Tcell",
@@ -30,10 +32,12 @@ Map<int, String> get992_en() {
     99275: "Babilon-M",
     99277: "Tcell",
     99278: "Megafon",
+    99279: "Anor",
     99280: "ZET-MOBILE",
     99281: "ZET-MOBILE",
     99287: "Megafon",
     99288: "Megafon",
+    99289: "Anor",
     99290: "Megafon",
     99291: "ZET-MOBILE",
     99292: "Tcell",

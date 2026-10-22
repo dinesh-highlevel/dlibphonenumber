@@ -5,7 +5,7 @@
 /// Carrier JSON data for 250_en
 Map<int, String> get250_en() {
   return {
-    25072: "TIGO",
+    25072: "Airtel",
     25073: "Airtel",
     25077: "KtRN",
     25078: "MTN",

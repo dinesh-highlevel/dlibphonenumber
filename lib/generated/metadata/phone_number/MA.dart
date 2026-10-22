@@ -11,14 +11,14 @@ Map<String, Object?> getMA() {
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "5(?:2(?:[0-25-79]\\d|3[1-578]|4[02-46-8]|8[0235-7])|3(?:[0-47]\\d|5[02-9]|6[02-8]|8[014-9]|9[3-9])|(?:4[067]|5[03])\\d)\\d{5}",
+          "5(?:(?:18|4[0679]|5[03])\\d|2(?:[0-25-79]\\d|3[1-578]|4[02-46-8]|8[0235-9])|3(?:[0-47]\\d|5[02-9]|6[02-8]|8[014-9]|9[3-9]))\\d{5}",
       "exampleNumber": "520123456",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
       "nationalNumberPattern":
-          "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:[0167]\\d|2[0-8]|5[0-5]|8[0-7]))\\d{6}",
+          "(?:6(?:[0-79]\\d|8[0-247-9])|7(?:[016-8]\\d|2[0-8]|3[01]|5[0-5]))\\d{6}",
       "exampleNumber": "650123456",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -57,60 +57,46 @@ Map<String, Object?> getMA() {
     "sameMobileAndFixedLinePattern": false,
     "numberFormat": [
       {
-        "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
-        "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["5[45]"],
-        "nationalPrefixFormattingRule": "0\$1",
-        "nationalPrefixOptionalWhenFormatting": false
-      },
-      {
         "pattern": "(\\d{4})(\\d{5})",
         "format": "\$1-\$2",
-        "leadingDigitsPattern": ["5(?:2[2-46-9]|3[3-9]|9)|8(?:0[89]|92)"],
+        "leadingDigitsPattern": ["892"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{2})(\\d{7})",
         "format": "\$1-\$2",
-        "leadingDigitsPattern": ["8"],
+        "leadingDigitsPattern": ["8(?:0[0-7]|9)"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
-        "pattern": "(\\d{3})(\\d{6})",
-        "format": "\$1-\$2",
-        "leadingDigitsPattern": ["[5-7]"],
+        "pattern": "(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})",
+        "format": "\$1 \$2 \$3 \$4 \$5",
+        "leadingDigitsPattern": ["[5-8]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }
     ],
     "intlNumberFormat": [
       {
-        "pattern": "(\\d{3})(\\d{2})(\\d{2})(\\d{2})",
-        "format": "\$1 \$2 \$3 \$4",
-        "leadingDigitsPattern": ["5[45]"],
-        "nationalPrefixFormattingRule": "0\$1",
-        "nationalPrefixOptionalWhenFormatting": false
-      },
-      {
         "pattern": "(\\d{4})(\\d{5})",
         "format": "\$1-\$2",
-        "leadingDigitsPattern": ["5(?:2[2-46-9]|3[3-9]|9)|8(?:0[89]|92)"],
+        "leadingDigitsPattern": ["892"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
         "pattern": "(\\d{2})(\\d{7})",
         "format": "\$1-\$2",
-        "leadingDigitsPattern": ["8"],
+        "leadingDigitsPattern": ["8(?:0[0-7]|9)"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       },
       {
-        "pattern": "(\\d{3})(\\d{6})",
-        "format": "\$1-\$2",
-        "leadingDigitsPattern": ["[5-7]"],
+        "pattern": "(\\d)(\\d{2})(\\d{2})(\\d{2})(\\d{2})",
+        "format": "\$1 \$2 \$3 \$4 \$5",
+        "leadingDigitsPattern": ["[5-8]"],
         "nationalPrefixFormattingRule": "0\$1",
         "nationalPrefixOptionalWhenFormatting": false
       }
@@ -120,6 +106,7 @@ Map<String, Object?> getMA() {
       "possibleLengthLocalOnly": [-1]
     },
     "mainCountryForCode": true,
+    "leadingDigits": "[5-8]",
     "noInternationalDialling": {
       "possibleLength": [-1],
       "possibleLengthLocalOnly": [-1]
