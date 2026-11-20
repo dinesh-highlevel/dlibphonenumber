@@ -7,9 +7,11 @@ Map<int, String> get261_en() {
   return {
     26132: "Orange",
     26133: "Airtel",
-    26134: "Telma",
+    26134: "Yas",
+    26135: "Airtel",
+    26136: "Yas",
     26137: "Orange",
-    26138: "Telma",
+    26138: "Yas",
     26139: "Blueline"
   };
 }

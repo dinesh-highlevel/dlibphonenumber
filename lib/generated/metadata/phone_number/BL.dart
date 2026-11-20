@@ -6,18 +6,19 @@
 Map<String, Object?> getBL() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:590\\d|7090)\\d{5}|(?:69|80|9\\d)\\d{7}",
+      "nationalNumberPattern": "7090\\d{5}|(?:[56]9|[89]\\d)\\d{7}",
       "possibleLength": [9]
     },
     "fixedLine": {
-      "nationalNumberPattern": "590(?:2[7-9]|3[3-7]|5[12]|87)\\d{4}",
+      "nationalNumberPattern":
+          "(?:59(?:0(?:2[7-9]|3[3-7]|5[12]|87)|87\\d)|80[6-9]\\d\\d)\\d{4}",
       "exampleNumber": "590271234",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
       "nationalNumberPattern":
-          "(?:69(?:0\\d\\d|1(?:2[2-9]|3[0-5])|4(?:0[89]|1[2-6]|9\\d)|6(?:1[016-9]|5[0-4]|[67]\\d))|7090[0-4])\\d{4}",
+          "(?:69(?:0\\d\\d|1(?:2[2-9]|3[0-5]))|7090[0-4])\\d{4}",
       "exampleNumber": "690001234",
       "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
@@ -29,7 +30,9 @@ Map<String, Object?> getBL() {
       "possibleLengthLocalOnly": [-1]
     },
     "premiumRate": {
-      "possibleLength": [-1],
+      "nationalNumberPattern": "8[129]\\d{7}",
+      "exampleNumber": "810123456",
+      "possibleLength": [9],
       "possibleLengthLocalOnly": [-1]
     },
     "sharedCost": {

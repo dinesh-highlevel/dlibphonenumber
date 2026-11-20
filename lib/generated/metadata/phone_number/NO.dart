@@ -11,13 +11,14 @@ Map<String, Object?> getNO() {
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "(?:2[1-4]|3[1-3578]|5[1-35-7]|6[1-4679]|7[0-8])\\d{6}",
+          "(?:2[1-4]|3[1-3578]|5[1-35-7]|6[1-46-9]|7[0-8])\\d{6}",
       "exampleNumber": "21234567",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:4[015-8]|9\\d)\\d{6}",
+      "nationalNumberPattern":
+          "45(?:[0-24-9]\\d|3[0-57-9])\\d{4}|(?:4[016-8]|9\\d)\\d{6}",
       "exampleNumber": "40612345",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

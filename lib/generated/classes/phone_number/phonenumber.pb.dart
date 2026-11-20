@@ -8,7 +8,7 @@
 // ignore_for_file: constant_identifier_names
 // ignore_for_file: curly_braces_in_flow_control_structures
 // ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -32,7 +32,7 @@ class PhoneNumber extends $pb.GeneratedMessage {
     $core.String? preferredDomesticCarrierCode,
     $core.int? numberOfLeadingZeros,
   }) {
-    final result = create();
+    final result = PhoneNumber._();
     if (countryCode != null) result.countryCode = countryCode;
     if (nationalNumber != null) result.nationalNumber = nationalNumber;
     if (extension_3 != null) result.extension_3 = extension_3;
@@ -51,35 +51,31 @@ class PhoneNumber extends $pb.GeneratedMessage {
 
   factory PhoneNumber.fromBuffer($core.List<$core.int> data,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
+      PhoneNumber()..mergeFromBuffer(data, registry);
   factory PhoneNumber.fromJson($core.String json,
           [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+      PhoneNumber()..mergeFromJson(json, registry);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       _omitMessageNames ? '' : 'PhoneNumber',
       package:
           const $pb.PackageName(_omitMessageNames ? '' : 'i18n.phonenumbers'),
-      createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'countryCode', $pb.PbFieldType.Q3)
+      createEmptyInstance: PhoneNumber.$_createMessage)
+    ..aI(1, _omitFieldNames ? '' : 'countryCode', fieldType: $pb.PbFieldType.Q3)
     ..a<$fixnum.Int64>(
         2, _omitFieldNames ? '' : 'nationalNumber', $pb.PbFieldType.QU6,
         defaultOrMaker: $fixnum.Int64.ZERO)
     ..aOS(3, _omitFieldNames ? '' : 'extension')
     ..aOB(4, _omitFieldNames ? '' : 'italianLeadingZero')
     ..aOS(5, _omitFieldNames ? '' : 'rawInput')
-    ..e<PhoneNumber_CountryCodeSource>(
-        6, _omitFieldNames ? '' : 'countryCodeSource', $pb.PbFieldType.OE,
-        defaultOrMaker: PhoneNumber_CountryCodeSource.UNSPECIFIED,
-        valueOf: PhoneNumber_CountryCodeSource.valueOf,
+    ..aE<PhoneNumber_CountryCodeSource>(
+        6, _omitFieldNames ? '' : 'countryCodeSource',
         enumValues: PhoneNumber_CountryCodeSource.values)
     ..aOS(7, _omitFieldNames ? '' : 'preferredDomesticCarrierCode')
-    ..a<$core.int>(
-        8, _omitFieldNames ? '' : 'numberOfLeadingZeros', $pb.PbFieldType.O3,
-        defaultOrMaker: 1);
+    ..aI(8, _omitFieldNames ? '' : 'numberOfLeadingZeros', defaultOrMaker: 1);
 
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PhoneNumber clone() => PhoneNumber()..mergeFromMessage(this);
+  PhoneNumber clone() => deepCopy();
   @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
   PhoneNumber copyWith(void Function(PhoneNumber) updates) =>
       super.copyWith((message) => updates(message as PhoneNumber))
@@ -89,13 +85,15 @@ class PhoneNumber extends $pb.GeneratedMessage {
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
+  @$core.Deprecated('Use PhoneNumber() / PhoneNumber.new instead')
   static PhoneNumber create() => PhoneNumber._();
+  static $pb.GeneratedMessage $_createMessage() => PhoneNumber._();
   @$core.override
-  PhoneNumber createEmptyInstance() => create();
-  static $pb.PbList<PhoneNumber> createRepeated() => $pb.PbList<PhoneNumber>();
+  PhoneNumber createEmptyInstance() => PhoneNumber._();
   @$core.pragma('dart2js:noInline')
-  static PhoneNumber getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<PhoneNumber>(create);
+  static PhoneNumber getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PhoneNumber>(
+          PhoneNumber.$_createMessage);
   static PhoneNumber? _defaultInstance;
 
   /// The country calling code for this number, as defined by the International

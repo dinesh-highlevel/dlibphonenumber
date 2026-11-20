@@ -6,18 +6,18 @@
 Map<String, Object?> getBF() {
   return {
     "generalDesc": {
-      "nationalNumberPattern": "(?:[025-7]\\d|44)\\d{6}",
+      "nationalNumberPattern": "[024-7]\\d{7}",
       "possibleLength": [8]
     },
     "fixedLine": {
       "nationalNumberPattern":
-          "2(?:0(?:49|5[23]|6[5-7]|9[016-9])|4(?:4[569]|5[4-6]|6[5-7]|7[0179])|5(?:[34]\\d|50|6[5-7]))\\d{4}",
+          "2(?:0(?:49|5[23]|6[5-7]|9[016-9])|4(?:4[569]|5[4-6]|6[5-7]|7[0179])|5(?:[34]\\d|50|6[5-8]))\\d{4}",
       "exampleNumber": "20491234",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]
     },
     "mobile": {
-      "nationalNumberPattern": "(?:0[1-7]|44|5[0-8]|[67]\\d)\\d{6}",
+      "nationalNumberPattern": "(?:0[1-7]|4[4-6]|5[0-8]|[67]\\d)\\d{6}",
       "exampleNumber": "70123456",
       "possibleLength": [8],
       "possibleLengthLocalOnly": [-1]

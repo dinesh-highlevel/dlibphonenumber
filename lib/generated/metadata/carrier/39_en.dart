@@ -16,8 +16,11 @@ Map<int, String> get39_en() {
     39371: "Vodafone",
     39373: "3 Italia",
     39377: "Vodafone",
+    39379: "Vodafone",
     39383: "Vodafone",
     393780: "spusu",
-    393784: "Vodafone"
+    393784: "Vodafone",
+    393785: "Vodafone",
+    393786: "Vodafone"
   };
 }

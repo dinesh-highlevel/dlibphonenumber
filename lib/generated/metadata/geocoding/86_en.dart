@@ -19,6 +19,7 @@ Map<int, String> get86_en() {
     8634: "Shuozhou, Shanxi",
     8658: "Zhoushan, Zhejiang",
     8670: "Yingtan, Jiangxi",
+    86173: "Beijing",
     86310: "Handan, Hebei",
     86311: "Shijiazhuang, Hebei",
     86312: "Baoding, Hebei",
